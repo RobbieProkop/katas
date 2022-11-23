@@ -21,3 +21,10 @@
 // -231 <= x <= 231 - 1
 
 // Follow up: Could you solve it without converting the integer to a string?
+let x = 121;
+
+const isPalindrome = (x) => {
+  console.log("x  :>> ", x);
+};
+
+console.log(isPalindrome(x));
