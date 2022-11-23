@@ -28,15 +28,17 @@
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 // const nums = [2, 7, 11, 15];
 // const target = 9;
-const nums = [3, 2, 4];
-const target = 6;
+// const nums = [3, 2, 4];
+// const target = 6;
+const nums = [2, 5, 5, 11];
+const target = 10;
 
 const twoSum = (nums, target) => {
   let result = [];
   for (let i = 0; i < nums.length; i++) {
     for (let j = 1; j < nums.length; j++) {
       let added = nums[i] + nums[j];
-      if (added === target) {
+      if (added === target && i !== j) {
         result.push(i, j);
         return result;
       }
@@ -44,3 +46,5 @@ const twoSum = (nums, target) => {
   }
   return result;
 };
+
+console.log(twoSum(nums, target));
