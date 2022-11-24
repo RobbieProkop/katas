@@ -38,3 +38,51 @@
 // 1 <= s.length <= 15
 // s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+let I = 1;
+V = 5;
+X = 10;
+L = 50;
+C = 100;
+D = 500;
+M = 1000;
+
+const romanToInt = (s) => {
+  // make it an array, starting from the end
+  let arr = s.split("").reverse();
+  console.log("x :>> ", arr);
+  let obj = {};
+  arr.map((letter) => {
+    console.log("letter :>> ", letter);
+    let value;
+    switch (letter) {
+      case "M":
+        value = 1000;
+        break;
+      case "D":
+        value = 500;
+        break;
+      case "C":
+        value = 100;
+        break;
+      case "L":
+        value = 50;
+        break;
+      case "X":
+        value = 10;
+        break;
+      case "V":
+        value = 5;
+        break;
+      case "I":
+        value = 1;
+        break;
+      // default:
+      //   value = "";
+    }
+    obj[letter] = value;
+  });
+  console.log("obj :>> ", obj);
+};
+
+romanToInt("MCMXCIV");
