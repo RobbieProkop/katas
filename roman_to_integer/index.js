@@ -50,7 +50,7 @@ M = 1000;
 const romanToInt = (s) => {
   // make it an array, starting from the end
   let arr = s.split("").reverse();
-  console.log("x :>> ", arr);
+  let final = 0;
   let obj = {};
   arr.map((letter) => {
     console.log("letter :>> ", letter);
