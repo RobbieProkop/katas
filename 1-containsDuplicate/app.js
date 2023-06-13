@@ -21,7 +21,17 @@
 let input = [1, 2, 3, 1];
 let newNums = [];
 
-input.forEach((num) => {
-  if (newNums.includes(num)) return true;
-  return false;
-});
+const checkDuplicate = (input) => {
+  let repeated = false;
+
+  for (let i = 0; i < input.length; i++) {
+    if (newNums.includes(input[i])) {
+      repeated = true;
+      return repeated;
+    }
+    newNums.push(input[i]);
+  }
+  return repeated;
+};
+
+checkDuplicate(input);
