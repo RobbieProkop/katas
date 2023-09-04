@@ -18,7 +18,7 @@
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 
-let input = [1, 2, 3, 1];
+let input = [1, 2, 3];
 let newNums = [];
 
 const checkDuplicate = (input) => {
@@ -34,4 +34,5 @@ const checkDuplicate = (input) => {
   return repeated;
 };
 
-checkDuplicate(input);
+console.log(checkDuplicate(input));
+///SOLVED
