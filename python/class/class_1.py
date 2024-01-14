@@ -13,4 +13,6 @@ print("Price Updated: ",kenwood.price)
 
 hamilton = Kettle("Hamilton", 14.55)
 
-print("Hamilton: ", hamilton.make, hamilton.price)
+print("Models: {} = {}, {} = {}".format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))
+print("Models: {0.make} = {0.price}, {1.make} = {1.price}".format(kenwood, hamilton))
+print(f"Models: {kenwood.make} = {kenwood.price}, {hamilton.make} = {hamilton.price}")
