@@ -20,8 +20,10 @@
 //   staircase(n - 1)
 // }
 
+const staircase = (n) => {
+  for (let i = 1; i <= n; i++) {
+    console.log("#".repeat(i))
+  }
+}
 
-for (let i = 0; )
-
-
-  console.log(staircase(5))
+console.log(staircase(5))
