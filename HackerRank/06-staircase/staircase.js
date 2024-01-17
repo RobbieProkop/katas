@@ -1,33 +1,42 @@
-// Both upside down stiarcases
+// using while loop
 
 // const staircase = (n) => {
 //   let base = "#"
 
-//   while (n > 0) {
-//     console.log(base.repeat(n))
-//     n--
+//   let current = 1;
+//   while (current <= n) {
+//     if (current === n) {
+//       console.log(base.repeat(n))
+//     } else {
+//       console.log(" ".repeat(n - current - 1), base.repeat(current))
+//     }
+//     current++
 //   }
 // }
 
 
-
+//using for loop
 // const staircase = (n) => {
-//   if (n <= 0) return;
-
-//   let base = "#"
-//   console.log(base.repeat(n))
-
-//   staircase(n - 1)
+//   for (let i = 1; i <= n; i++) {
+//     if (i === n) {
+//       console.log("#".repeat(i))
+//     } else {
+//       console.log(" ".repeat(n - i - 1), "#".repeat(i))
+//     }
+//   }
 // }
 
+// using recursion
+const printStaircase = (current, n) => {
+  if (current > n) return;
+
+  let base = "#".repeat(current);
+  let spaces = " ".repeat(n - current)
+  console.log(spaces + base)
+  printStaircase(current + 1, n)
+}
 const staircase = (n) => {
-  for (let i = 1; i <= n; i++) {
-    if (i === n) {
-      console.log("#".repeat(i))
-    } else {
-      console.log(" ".repeat(n - i - 1), "#".repeat(i))
-    }
-  }
+  printStaircase(1, n)
 }
 
 console.log(staircase(6))
