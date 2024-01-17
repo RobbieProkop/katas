@@ -22,8 +22,12 @@
 
 const staircase = (n) => {
   for (let i = 1; i <= n; i++) {
-    console.log(" ".repeat(n - i), "#".repeat(i))
+    if (i === n) {
+      console.log("#".repeat(i))
+    } else {
+      console.log(" ".repeat(n - i - 1), "#".repeat(i))
+    }
   }
 }
 
-console.log(staircase(5))
+console.log(staircase(6))
