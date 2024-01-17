@@ -22,9 +22,9 @@ const plusMinus = (arr) => {
   const negativeRatio = (negative / count).toFixed(6)
   const zeroRatio = (zero / count).toFixed(6)
 
-  console.log('positiveTotal :>> ', positiveRatio);
-  console.log('negativeTotal :>> ', negativeRatio);
-  console.log('zeroTotal :>> ', zeroRatio);
+  console.log(positiveRatio);
+  console.log(negativeRatio);
+  console.log(zeroRatio);
 
 }
 
