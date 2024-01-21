@@ -2,7 +2,9 @@ const gradingStudents = (grades) => {
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] < 38) continue
     if (((grades[i] + 5) % 5) >= 3) {
-      grades[i] = grades[i] + (grades[i] % 5) - 1
+      while (grades[i] % 5 !== 0) {
+        grades[i]++
+      }
     }
   }
   return grades
